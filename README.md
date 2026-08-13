@@ -1,24 +1,24 @@
 # Short n' Sweet Flappy
 
-A modern, highly addictive Flappy Bird evolution themed around Sabrina Carpenter. Float through espresso-shot pipes, chain clean passes for combo multipliers, and skim the foam for near-miss bonuses.
+One-tap Flappy tension, rebuilt as high-fashion chaos. Same pure loop — flap, thread the gap, don’t die — but snappier physics, living gates, graze payouts, and pressure that goes electric as the score climbs.
 
-Built as a single static page so it deploys anywhere and can later ship as a native iOS app with minimal changes.
+Single static page. Deploys anywhere. Easy to wrap later for iOS.
 
 ## How to play
 
-- **Tap or click anywhere** to flap.
-- Weave through the espresso shots. Each pass scores points.
-- **Near-miss:** skim close to a pipe lip for **+2** and a gold flash.
-- **Combo:** consecutive clean passes climb **x1 → x2 → x3**.
-- One hit ends the run. Tap again to restart instantly.
-- High score is saved on device. Medals: Bronze (10), Silver (25), Gold (50), Platinum (100).
+- **Tap or click anywhere** to flap. That’s the only control.
+- Pass chrome gates to score. Combo climbs the longer you stay clean (**x1 → x5 Overdrive**).
+- **Graze** a lip for a fat bonus, a visual slam, and extra heat.
+- **Surges** kick in as you climb: tighter hot gates, more speed, more points.
+- One hit ends the run. Tap to retry immediately.
+- Best score is saved on device. Ranks: Spark (10), Volt (25), Icon (50), Void (100).
 
 ## Tech stack
 
 - Vanilla **HTML + CSS + JavaScript**
-- **Canvas 2D** rendering (no images, fonts, libraries, or CDNs)
+- **Canvas 2D** (no images, fonts, libraries, or CDNs)
 - `localStorage` for best score
-- Optional `navigator.vibrate` haptics (no-ops gracefully on iOS)
+- Optional `navigator.vibrate` haptics (silent fallback on iOS)
 
 ## Deploy (Netlify)
 
@@ -33,4 +33,4 @@ Locally, open `index.html` in a browser or serve the folder with any static serv
 
 Designed to be easily wrapped with Capacitor for iOS App Store.
 
-The game already uses a WKWebView-safe subset of the web platform (Canvas, touch/pointer input, localStorage, Web Audio after a user gesture). Drop `index.html` into a Capacitor web root, then optionally swap the isolated `haptic()` helper for `@capacitor/haptics` for native iPhone feedback.
+WKWebView-safe APIs only (Canvas, touch/pointer input, localStorage, Web Audio after a gesture). Drop `index.html` into a Capacitor web root and optionally swap `haptic()` for `@capacitor/haptics`.
