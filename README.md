@@ -1,23 +1,24 @@
-# Short n' Sweet Flappy
+# Short n' Sweet Ascent
 
-One-tap Flappy tension, rebuilt as high-fashion chaos. Same pure loop — flap, thread the gap, don’t die — but snappier physics, living gates, graze payouts, and pressure that goes electric as the score climbs.
+A vertical one-tap climber. Gravity drags you down. You flap to rise. The camera chases altitude through a 2.5D shaft of shifting apertures — not a side-scrolling Flappy clone.
 
 Single static page. Deploys anywhere. Easy to wrap later for iOS.
 
 ## How to play
 
-- **Tap or click anywhere** to flap. That’s the only control.
-- Pass chrome gates to score. Combo climbs the longer you stay clean (**x1 → x5 Overdrive**).
-- **Graze** a lip for a fat bonus, a visual slam, and extra heat.
-- **Surges** kick in as you climb: tighter hot gates, more speed, more points.
-- One hit ends the run. Tap to retry immediately.
-- Best score is saved on device. Ranks: Spark (10), Volt (25), Icon (50), Void (100).
+- **Tap or click** to flap. That’s the only control.
+- Tap **left or right of your first tap** to veer. Same spot = straight up.
+- Thread 3D gates, hoops, sweepers, and dual lanes as you climb.
+- **Graze** a rim or hit **Perfect** center for extra score.
+- Combo climbs **x1 → x5 Overdrive**. Surges drop hotter, tighter gates.
+- Fall off the bottom or clip a gate and you’re done. Tap to rise again.
+- Score and **altitude** are saved. Ranks: Spark 15 / Volt 40 / Icon 80 / Apex 140.
 
 ## Tech stack
 
 - Vanilla **HTML + CSS + JavaScript**
-- **Canvas 2D** (no images, fonts, libraries, or CDNs)
-- `localStorage` for best score
+- **Canvas 2D** with perspective projection, parallax, and camera roll (no images, fonts, libraries, or CDNs)
+- `localStorage` for best score and best altitude
 - Optional `navigator.vibrate` haptics (silent fallback on iOS)
 
 ## Deploy (Netlify)
